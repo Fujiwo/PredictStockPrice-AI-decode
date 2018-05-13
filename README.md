@@ -188,3 +188,15 @@ Azure Machine Learning Studio を使って簡単に機械学習を利用した A
 全部が完了するまで、待ちましょう。
 
 ![Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(59).png?raw=true "Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)")
+
+## 3.26 「RUN」が完了したら、結果を確認してみましょう。
+「Evaluate Model」を右クリックし、「Evaluation results」から「Visualize」をクリックします。
+
+![Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(60).png?raw=true "Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)")
+
+## 3.27 「Accuracy」が 0.571 などと表示されているのが分かります。57% の精度で予測できたようです。
+
+![Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(61).png?raw=true "Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)")
+
+## 4. [Microsoft Azure Machine Learning Studio](https://studio.azureml.net) でマシーンラーニング (機械学習) したモデルから API を作成
+
