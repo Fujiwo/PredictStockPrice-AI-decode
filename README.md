@@ -16,7 +16,8 @@ Azure Machine Learning Studio を使って簡単に機械学習を利用した A
 * [2. SQL データベースへのデータのアップロード](#section2)
 * [3. Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)](#section3)
 * [4. Microsoft Azure Machine Learning Studio でマシーンラーニング (機械学習) したモデルから API を作成](#section4)
-* [5. JavaScript から API を呼んでみるテスト](#section5)
+* [5. C# から API を呼んでみるテスト](#section5)
+* [6. JavaScript から API を呼んでみるテスト](#section6)
 
 ---
 ## <a id="section1"></a>1. SQL データベースの作成
@@ -242,5 +243,7 @@ Azure Machine Learning Studio を使って簡単に機械学習を利用した A
 ![Microsoft Azure Machine Learning Studio でマシーンラーニング (機械学習) したモデルから API を作成](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(81).png?raw=true "Microsoft Azure Machine Learning Studio でマシーンラーニング (機械学習) したモデルから API を作成")
 
 ---
-## <a id="section5"></a>5. JavaScript から API を呼んでみるテスト
+## <a id="section5"></a>5. C# から API を呼んでみるテスト
 
+---
+## <a id="section5"></a>6. JavaScript から API を呼んでみるテスト
