@@ -1,10 +1,10 @@
 # PredictStockPrice-AI-decode
 PredictStockPrice Sample for Microsoft de:code 2018 AI sessions
 
-Azure Machine Learning Studio による株価予想プログラム
+[Microsoft Azure Machine Learning Studio](https://studio.azureml.net) による株価予想プログラム
 
 ### 概要:
-Azure Machine Learning Studio 上で、株価データを Python で加工し、機械学習させ、API を作成し、Web アプリケーションから JavaScript で使ってみるところまでのチュートリアル。
+Microsoft Azure Machine Learning Studio 上で、株価データを Python で加工し、機械学習させ、API を作成し、Web アプリケーションから JavaScript で使ってみるところまでのチュートリアル。
 
 ### 狙い:
 Azure Machine Learning Studio を使って簡単に機械学習を利用した API が作れ、自分のアプリケーションで利用できるようになる。
@@ -17,6 +17,7 @@ Azure Machine Learning Studio を使って簡単に機械学習を利用した A
 ![SQL データベースの作成 | Microsoft Azure](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(04).png?raw=true "SQL データベースの作成 | Microsoft Azure")
 
 ### 1.2 「データベース名」を入力し、「サブスクリプション」を選択、「リソースグループ」を入力し、サーバーの構成を行います。
+サーバーの構成では、サーバー管理者ログインやパスワードなどを設定します。
 
 ![SQL データベースの作成 | Microsoft Azure](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(06).png?raw=true "SQL データベースの作成 | Microsoft Azure")
 
@@ -31,3 +32,47 @@ Azure Machine Learning Studio を使って簡単に機械学習を利用した A
 ### 1.5 サーバー名などが含まれた「接続文字列」が確認できます。
 
 ![SQL データベースの作成 | Microsoft Azure](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(10).png?raw=true "SQL データベースの作成 | Microsoft Azure")
+
+## 2. SQL データベースへのデータのアップロード
+
+### 2.1 [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/ja-jp/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017) を起動し、SQL データベースに接続します。
+先ほどの接続文字列の中のサーバー名と、サーバーの構成で設定したサーバー管理者ログインやパスワードなどを入力します。
+
+![SQL データベースの作成 | Microsoft Azure](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(00).png?raw=true "SQL データベースの作成 | Microsoft Azure")
+
+### 2.2 Azure にサインインします。
+
+![SQL データベースの作成 | Microsoft Azure](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(11).png?raw=true "SQL データベースの作成 | Microsoft Azure")
+
+### 2.3 ファイアウォール ルールを設定します。
+
+![SQL データベースの作成 | Microsoft Azure](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(01).png?raw=true "SQL データベースの作成 | Microsoft Azure")
+
+### 2.4 SQL データベースに接続されました。
+
+![SQL データベースの作成 | Microsoft Azure](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(12).png?raw=true "SQL データベースの作成 | Microsoft Azure")
+
+### 2.5 データベースに対して、タスクからフラットファイルをインポートしましょう。
+
+![SQL データベースの作成 | Microsoft Azure](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(13).png?raw=true "SQL データベースの作成 | Microsoft Azure")
+
+### 2.6 本レポジトリーの中の「9790.csv」を指定します。
+
+![SQL データベースの作成 | Microsoft Azure](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(14).png?raw=true "SQL データベースの作成 | Microsoft Azure")
+
+### 2.7 データがプレビューされます。
+
+![SQL データベースの作成 | Microsoft Azure](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(15).png?raw=true "SQL データベースの作成 | Microsoft Azure")
+
+### 2.8 各列のデータ タイプや主キーを設定します。
+
+![SQL データベースの作成 | Microsoft Azure](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(16).png?raw=true "SQL データベースの作成 | Microsoft Azure")
+
+### 2.9 インポートされたら、テーブルの中のデータを確認してみましょう。
+
+![SQL データベースの作成 | Microsoft Azure](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(17).png?raw=true "SQL データベースの作成 | Microsoft Azure")
+
+## 3. [Microsoft Azure Machine Learning Studio](https://studio.azureml.net) によるマシーンラーニング (機械学習)
+
+
+
