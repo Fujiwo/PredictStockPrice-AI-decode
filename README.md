@@ -87,7 +87,7 @@ Azure Machine Learning Studio を使って簡単に機械学習を利用した A
 
 ![Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(21).png?raw=true "Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)")
 
-### 3.4 左側のツールボックスから、「Data Input and Output」の中の「Import Data」を作図エリアの先頭の箱にドラッグ アンド ドロップします。
+### 3.4 左側のツール パレットから、「Data Input and Output」の中の「Import Data」を中央の作図エリアの先頭の箱にドラッグ アンド ドロップします。
 
 ![Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(23).png?raw=true "Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)")
 
@@ -121,3 +121,70 @@ Azure Machine Learning Studio を使って簡単に機械学習を利用した A
 ### 3.11 SQL データベースからインポートされたデータを見ることができます。
 
 ![Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(42).png?raw=true "Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)")
+
+### 3.12 このままのデータではマシーンラーニング (機械学習) に使うのに適さないため、プログラミング言語 Python を使って、データを加工することにします。
+左のツール パレットの「Python Language Modules」から「Execute Python Script」を中央の作図領域にドラッグ アンド ドロップします。
+
+![Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(43).png?raw=true "Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)")
+
+### 3.13 プロパティの「Python script」には、本レポジトリーの中の「AzureMachineLearningScript.1.py」の中のテキストをコピーしてください。
+
+![Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(44).png?raw=true "Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)")
+
+### 3.14 「Import Data」の下部の小円から「Execute Python Script」の上部の一番左の小円までをドラッグ アンド ドロップして、「Import Data」の出力を「Execute Python Script」の入力とします。
+
+![Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(45).png?raw=true "Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)")
+
+### 3.15 「Import Data」のときと同様、「RUN」してから「Execute Python Script」を右クリックして、「Result dataset」から「Visualize」を選んでみましょう。
+
+![Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(46).png?raw=true "Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)")
+
+### 3.16 Python で加工後のデータを見ることができます。
+この Python では、単純な株価1列だけのデータを、各行が、14日分の株価の上昇率のデータと翌日株価が実際に上昇したかどうかの教師データという、15列からなるデータに加工しています。
+
+![Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(47).png?raw=true "Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)")
+
+### 3.17 次にこのデータを学習用データと評価用データに分割します。
+ツール パレットの「Data Transformation」の中の「Sample and Split」から「Split Data」を、作図領域にドラッグ アンド ドロップします。
+「Execute Python Script」の出力を「Split Data」の入力とします。
+「Split Data」のプロパティの「Fraction of rows in the first output dataset」の値を 0.8 にします。
+これにより、データは分割され、80%が1番から 20%が2番から出力されます。
+
+![Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(49).png?raw=true "Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)")
+
+### 3.18 いよいよマシーン ラーニング (機械学習) を行う「Train Model」を追加します。
+ツール パレットの「Machine Learning」の中の「Train」から「Train Modal」を、作図領域にドラッグ アンド ドロップします。
+
+![Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(50).png?raw=true "Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)")
+
+### 3.19 次に、ツール パレットの「Machine Learning」の中の「Initialize Model」の「Classification」から「Two Class Support Vector Machine」を、作図領域にドラッグ アンド ドロップします。
+[サポート ベクター マシン](https://ja.wikipedia.org/wiki/%E3%82%B5%E3%83%9D%E3%83%BC%E3%83%88%E3%83%99%E3%82%AF%E3%82%BF%E3%83%BC%E3%83%9E%E3%82%B7%E3%83%B3) は、は、教師あり学習を用いたパターン認識方法で、今回は株価が上がるか否かの分類に用います。
+
+![Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(51).png?raw=true "Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)")
+
+### 3.21 「Two Class Support Vector Machine」の出力を「Train Model」の1つ目の入力とし、「Split Data」の1つ目の出力を「Train Model」の2つ目の入力とします。
+また、「Train Model」のプロパティから「Launch column selector」をクリックします。
+
+![Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(52).png?raw=true "Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)")
+
+### 3.22 データの中から、教師データとする列を選びます。
+「WITH RULES」 - 「Include」「column names」を選び、列名として Answer と入力します。
+
+![Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(53).png?raw=true "Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)")
+
+### 3.23 次に、マシーン ラーニング (機械学習) の結果を、評価用データを使って評価してみます。
+ツール パレットの「Machine Learning」の中の「Score」から「Score Model」を、作図領域にドラッグ アンド ドロップします。
+「Train Model」の出力を「Score Model」の1つ目の入力、「Split Data」の2つ目の出力 (評価用データ) を「Score Model」の1つ目の入力とします。
+
+![Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(56).png?raw=true "Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)")
+
+### 3.24 ツール パレットの「Machine Learning」の中の「Evaluate」から「Evaluate Model」を、作図領域にドラッグ アンド ドロップします。
+「Score Model」の出力を「Evaluate Model」入力とします。
+
+![Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(58).png?raw=true "Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)")
+
+### 3.25 「RUN」します。
+上から順番に動作していき、成功すると緑のチェックが付きます。
+全部が完了するまで、待ちましょう。
+
+![Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(59).png?raw=true "Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)")
