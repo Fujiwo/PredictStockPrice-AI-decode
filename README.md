@@ -79,4 +79,45 @@ Azure Machine Learning Studio を使って簡単に機械学習を利用した A
 
 ![Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(18).png?raw=true "Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)")
 
+### 3.2 「EXPERIMENTS」-「NEW」で新しい Experiment の追加を開始します。
 
+![Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(20).png?raw=true "Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)")
+
+### 3.3 Blank Experiment を選んで追加します。
+
+![Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(21).png?raw=true "Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)")
+
+### 3.4 左側のツールボックスから、「Data Input and Output」の中の「Import Data」を作図エリアの先頭の箱にドラッグ アンド ドロップします。
+
+![Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(23).png?raw=true "Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)")
+
+### 3.5 「Import Data」のプロパティを設定します。
+「Launch Import Data Wizard」をクリックして、インポート データ ウィザードを起動します。
+
+![Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(32).png?raw=true "Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)")
+
+### 3.6 「Azure SQL Database」を選択して、次へ行きます。
+
+![Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(33).png?raw=true "Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)")
+
+### 3.7 「Subscription ID」、「Database server name」、「Database name」、「User name」そして「Password」を入力します。
+「Test Connection」で接続に成功することを確認して、次へ行きます。
+
+![Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(34).png?raw=true "Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)")
+
+### 3.8 「Database query」として、SELECT [Adjusted] FROM [dbo].[9790] と入力し、ウィザードを完了します。
+
+![Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(39).png?raw=true "Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)")
+
+### 3.9 「Import Data」の動作を確認してみましょう。
+下のバーの「RUN」をクリックします。
+
+![Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(40).png?raw=true "Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)")
+
+### 3.10 「RUN」が完了したら、「Import Data」を右クリックし、「Results dataset」から「Visualize」をクリックします。
+
+![Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(41).png?raw=true "Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)")
+
+### 3.11 SQL データベースからインポートされたデータを見ることができます。
+
+![Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(42).png?raw=true "Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)")
