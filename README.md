@@ -212,6 +212,35 @@ Azure Machine Learning Studio を使って簡単に機械学習を利用した A
 ---
 ## <a id="section4"></a>4. [Microsoft Azure Machine Learning Studio](https://studio.azureml.net) でマシーンラーニング (機械学習) したモデルから API を作成
 
+## 4.1 学習済みのモデルから、API を作ってみましょう。
+画面下部の「Predictice Web Service」をクリックします。
+
+![Microsoft Azure Machine Learning Studio でマシーンラーニング (機械学習) したモデルから API を作成](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(62).png?raw=true "Microsoft Azure Machine Learning Studio でマシーンラーニング (機械学習) したモデルから API を作成")
+
+## 4.2 「Predictice Experiment」というタブが作られます。
+画面下部の「RUN」をクリックしてみましょう。
+すべての実行が終わるまで待ちましょう。
+
+![Microsoft Azure Machine Learning Studio でマシーンラーニング (機械学習) したモデルから API を作成](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(77).png?raw=true "Microsoft Azure Machine Learning Studio でマシーンラーニング (機械学習) したモデルから API を作成")
+
+## 4.3 すべての実行が完了したら、画面下部の「DEPLOY WEB SERVICE」をクリックしてみます。
+
+![Microsoft Azure Machine Learning Studio でマシーンラーニング (機械学習) したモデルから API を作成](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(78).png?raw=true "Microsoft Azure Machine Learning Studio でマシーンラーニング (機械学習) したモデルから API を作成")
+
+## 4.4 学習済みモデルを利用した API が作られます。
+画面左下の「API HELP PAGE」 - 「REQUEST/RESPONSE」をクリックすると、作られた API の使い方を見ることができます。
+
+![Microsoft Azure Machine Learning Studio でマシーンラーニング (機械学習) したモデルから API を作成](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(79).png?raw=true "Microsoft Azure Machine Learning Studio でマシーンラーニング (機械学習) したモデルから API を作成")
+
+## 4.5 API の使い方が表示されます。
+
+![Microsoft Azure Machine Learning Studio でマシーンラーニング (機械学習) したモデルから API を作成](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(80).png?raw=true "Microsoft Azure Machine Learning Studio でマシーンラーニング (機械学習) したモデルから API を作成")
+
+例えば、呼び出すときに入力として渡す JSON の例が示されています。
+ただし、この API の入力には15日分の株価を必要としますので、Values は、大きさ15の配列にする必要があります。
+
+![Microsoft Azure Machine Learning Studio でマシーンラーニング (機械学習) したモデルから API を作成](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(81).png?raw=true "Microsoft Azure Machine Learning Studio でマシーンラーニング (機械学習) したモデルから API を作成")
+
 ---
 ## <a id="section5"></a>5. JavaScript から API を呼んでみるテスト
 
