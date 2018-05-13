@@ -38,41 +38,45 @@ Azure Machine Learning Studio を使って簡単に機械学習を利用した A
 ### 2.1 [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/ja-jp/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017) を起動し、SQL データベースに接続します。
 先ほどの接続文字列の中のサーバー名と、サーバーの構成で設定したサーバー管理者ログインやパスワードなどを入力します。
 
-![SQL データベースの作成 | Microsoft Azure](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(00).png?raw=true "SQL データベースの作成 | Microsoft Azure")
+![SQL データベースへのデータのアップロード](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(00).png?raw=true "SQL データベースへのデータのアップロード")
 
 ### 2.2 Azure にサインインします。
 
-![SQL データベースの作成 | Microsoft Azure](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(11).png?raw=true "SQL データベースの作成 | Microsoft Azure")
+![SQL データベースへのデータのアップロード](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(11).png?raw=true "SQL データベースへのデータのアップロード")
 
 ### 2.3 ファイアウォール ルールを設定します。
 
-![SQL データベースの作成 | Microsoft Azure](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(01).png?raw=true "SQL データベースの作成 | Microsoft Azure")
+![SQL データベースへのデータのアップロード](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(01).png?raw=true "SQL データベースへのデータのアップロード")
 
 ### 2.4 SQL データベースに接続されました。
 
-![SQL データベースの作成 | Microsoft Azure](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(12).png?raw=true "SQL データベースの作成 | Microsoft Azure")
+![SQL データベースへのデータのアップロード](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(12).png?raw=true "SQL データベースへのデータのアップロード")
 
 ### 2.5 データベースに対して、タスクからフラットファイルをインポートしましょう。
 
-![SQL データベースの作成 | Microsoft Azure](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(13).png?raw=true "SQL データベースの作成 | Microsoft Azure")
+![SQL データベースへのデータのアップロード](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(13).png?raw=true "SQL データベースへのデータのアップロード")
 
 ### 2.6 本レポジトリーの中の「9790.csv」を指定します。
 
-![SQL データベースの作成 | Microsoft Azure](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(14).png?raw=true "SQL データベースの作成 | Microsoft Azure")
+![SQL データベースへのデータのアップロード](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(14).png?raw=true "SQL データベースへのデータのアップロード")
 
 ### 2.7 データがプレビューされます。
 
-![SQL データベースの作成 | Microsoft Azure](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(15).png?raw=true "SQL データベースの作成 | Microsoft Azure")
+![SQL データベースへのデータのアップロード](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(15).png?raw=true "SQL データベースへのデータのアップロード")
 
 ### 2.8 各列のデータ タイプや主キーを設定します。
 
-![SQL データベースの作成 | Microsoft Azure](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(16).png?raw=true "SQL データベースの作成 | Microsoft Azure")
+![SQL データベースへのデータのアップロード](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(16).png?raw=true "SQL データベースへのデータのアップロード")
 
 ### 2.9 インポートされたら、テーブルの中のデータを確認してみましょう。
 
-![SQL データベースの作成 | Microsoft Azure](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(17).png?raw=true "SQL データベースの作成 | Microsoft Azure")
+![SQL データベースへのデータのアップロード](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(17).png?raw=true "SQL データベースへのデータのアップロード")
 
 ## 3. [Microsoft Azure Machine Learning Studio](https://studio.azureml.net) によるマシーンラーニング (機械学習)
 
+### 3.1 [Microsoft Azure Machine Learning Studio](https://studio.azureml.net) にサインインします。
+料金プランを選びます。ここでは、「Free Workspace」を選ぶことにします。
+
+![Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(18).png?raw=true "Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)")
 
 
