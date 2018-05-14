@@ -59,7 +59,7 @@ namespace CallRequestResponseService
                     Inputs = new Dictionary<string, StringTable>() { { "input1", stringTable } },
                     GlobalParameters = new Dictionary<string, string>() {}
                 };
-                const string apiKey = "j6e2zQ0jqr349VroPhlY2IZIwNuipJGnVKOZ7OIXO5QWVQbNzIT+Nqwb0unzFH7a/VhvaxUhDQ5kWrdqc+izig=="; // Replace this with the API key for the web service
+                const string apiKey = "your api key"; // Replace this with the API key for the web service
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", apiKey);
                 client.BaseAddress = new Uri("https://ussouthcentral.services.azureml.net/workspaces/f3535c9a53f04c4eb96bb7bdf6808f1a/services/5ff5f716f627422ebd8c804a2ca8fcf4/execute?api-version=2.0&details=true");
 

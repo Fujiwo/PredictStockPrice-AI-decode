@@ -10,6 +10,15 @@ Microsoft Azure Machine Learning Studio 上で、株価データを Python で�
 ### 狙い:
 Azure Machine Learning Studio を使って簡単に機械学習を利用した API が作れ、自分のアプリケーションで利用できるようになる。
 
+### レポジトリーの中のファイル:
+
+| ファイル名 | 説明 | 使用されている章 | 
+| ---- | ---- | ---- |
+| 9790.csv | 株価データ (CSV) | 2.6 |
+| AzureMachineLearningScript.1.py | Microsoft Azure Machine Learning Studio で用いる Python Script | 3.13 |
+| PredictStockPrice.Console/Program.cs | Microsoft Azure Machine Learning Studio で作成した API を呼び出す C# のサンプル コード | 5 |
+
+
 ### 目次:
 
 * [1. SQL データベースの作成](#section1)
@@ -229,7 +238,8 @@ Azure Machine Learning Studio を使って簡単に機械学習を利用した A
 ![Microsoft Azure Machine Learning Studio でマシーンラーニング (機械学習) したモデルから API を作成](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(78).png?raw=true "Microsoft Azure Machine Learning Studio でマシーンラーニング (機械学習) したモデルから API を作成")
 
 ## 4.4 学習済みモデルを利用した API が作られます。
-画面左下の「API HELP PAGE」 - 「REQUEST/RESPONSE」をクリックすると、作られた API の使い方を見ることができます。
+API を呼び出すための「API key」が表示されます。
+また、画面左下の「API HELP PAGE」 - 「REQUEST/RESPONSE」をクリックすると、作られた API の使い方を見ることができます。
 
 ![Microsoft Azure Machine Learning Studio でマシーンラーニング (機械学習) したモデルから API を作成](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(79).png?raw=true "Microsoft Azure Machine Learning Studio でマシーンラーニング (機械学習) したモデルから API を作成")
 
@@ -242,8 +252,31 @@ Azure Machine Learning Studio を使って簡単に機械学習を利用した A
 
 ![Microsoft Azure Machine Learning Studio でマシーンラーニング (機械学習) したモデルから API を作成](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(81).png?raw=true "Microsoft Azure Machine Learning Studio でマシーンラーニング (機械学習) したモデルから API を作成")
 
+また、同じページの下部の方には、C#、Python、R のサンプル コードが示されています。
+
+![Microsoft Azure Machine Learning Studio でマシーンラーニング (機械学習) したモデルから API を作成](https://github.com/Fujiwo/PredictStockPrice-AI-decode/blob/master/images/2018-05-12%20(82).png?raw=true "Microsoft Azure Machine Learning Studio でマシーンラーニング (機械学習) したモデルから API を作成")
+
 ---
 ## <a id="section5"></a>5. C# から API を呼んでみるテスト
+
+上述の API の使い方のページに示された C# のサンプル コードをベースに、作成したものが、本レポジトリーの中の PredictStockPrice.Console/Program.cs です。
+
+このコード中の、
+
+const string apiKey = "your api key"; // Replace this with the API key for the web service
+
+の apiKey の値は、ご自身の API の使い方のページに示された「API key」を入力します。
+
+また、
+
+client.BaseAddress = new Uri("your api URI"); // Replace this with the URI for the web service
+
+には、ご自身の API の使い方のページの「API HELP PAGE」 - 「REQUEST/RESPONSE」をクリックして表示されたページの中の C# のサンプル コード中の、
+
+client.BaseAddress = new Uri("XXX");
+
+の行をコピーしてお使いください。
+
 
 ---
 ## <a id="section5"></a>6. JavaScript から API を呼んでみるテスト
