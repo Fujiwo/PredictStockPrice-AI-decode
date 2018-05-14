@@ -60,8 +60,8 @@ namespace CallRequestResponseService
                     GlobalParameters = new Dictionary<string, string>() {}
                 };
                 const string apiKey = "your api key"; // Replace this with the API key for the web service
+                client.BaseAddress = new Uri("your api URI"); // Replace this with the URI for the web service
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", apiKey);
-                client.BaseAddress = new Uri("https://ussouthcentral.services.azureml.net/workspaces/f3535c9a53f04c4eb96bb7bdf6808f1a/services/5ff5f716f627422ebd8c804a2ca8fcf4/execute?api-version=2.0&details=true");
 
                 // WARNING: The 'await' statement below can result in a deadlock if you are calling this code from the UI thread of an ASP.Net application.
                 // One way to address this would be to call ConfigureAwait(false) so that the execution does not attempt to resume on the original context.
