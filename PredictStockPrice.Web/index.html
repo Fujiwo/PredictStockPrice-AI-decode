@@ -154,21 +154,24 @@
             $('#result').html('');
             $('#image').html('');
 
-            var endpoint = "https://southcentralus.api.cognitive.microsoft.com/vision/v1.0";
-            var subscriptionKey = "d4ecd8dfdc604100951d85d11a7d3511";
-            var params = {
-                "visualFeatures": "Description, Faces",
-                "details": "",
-                "language": "en",
-            };
+            //headers = { 'Content-Type': 'application/json', 'Authorization': ('Bearer ' + api_key) }
+            //var endpoint = "https://southcentralus.api.cognitive.microsoft.com/vision/v1.0";
+            var endpoint = "https://ussouthcentral.services.azureml.net/workspaces/f3535c9a53f04c4eb96bb7bdf6808f1a/services/5ff5f716f627422ebd8c804a2ca8fcf4/execute?api-version=2.0&details=true";
+            //var subscriptionKey = "d4ecd8dfdc604100951d85d11a7d3511";
+            var apiKey = "j6e2zQ0jqr349VroPhlY2IZIwNuipJGnVKOZ7OIXO5QWVQbNzIT+Nqwb0unzFH7a/VhvaxUhDQ5kWrdqc+izig==";
+            //var params = {
+            //    "visualFeatures": "Description, Faces",
+            //    "details": "",
+            //    "language": "en",
+            //};
             var imageUrl = $('#imageUrlTextBox').val();
 
             $.ajax({
-                url: endpoint + "/analyze?" + $.param(params),
+                url: endpoint /* + $.param(params) */,
                 beforeSend: function (xhrObj) {
                     // Request headers
                     xhrObj.setRequestHeader("Content-Type", "application/json");
-                    xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key", subscriptionKey);
+                    xhrObj.setRequestHeader("Authorization", "Bearer " + apiKey);
                 },
                 type: "POST",
                 data: '{"url": ' + '"' + imageUrl + '"}',
