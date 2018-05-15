@@ -26,7 +26,6 @@ Azure Machine Learning Studio を使って簡単に機械学習を利用した A
 * [3. Microsoft Azure Machine Learning Studio によるマシーンラーニング (機械学習)](#section3)
 * [4. Microsoft Azure Machine Learning Studio でマシーンラーニング (機械学習) したモデルから API を作成](#section4)
 * [5. C# から API を呼んでみるテスト](#section5)
-* [6. JavaScript から API を呼んでみるテスト](#section6)
 
 ---
 ## <a id="section1"></a>1. SQL データベースの作成
@@ -279,4 +278,3 @@ client.BaseAddress = new Uri("XXX");
 
 
 ---
-## <a id="section5"></a>6. JavaScript から API を呼んでみるテスト
