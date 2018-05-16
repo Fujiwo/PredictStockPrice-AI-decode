@@ -6,6 +6,9 @@ PredictStockPrice Sample for Microsoft de:code 2018 AI sessions
 ---
 
 ### 概要:
+
+Microsoft [de:code 2018](https://www.microsoft.com/ja-jp/events/decode/2018/) で提供されるサンプル コードです。
+
 Microsoft Azure Machine Learning Studio 上で、株価データを Python で加工し、機械学習させ、学習後のモデルから API を作成し、それを C# で呼んでみるところまでのチュートリアルです。
 
 Azure Machine Learning Studio を使うと、簡単に機械学習を利用した API を作ることができます。
