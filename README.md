@@ -287,6 +287,6 @@ client.BaseAddress = new Uri("XXX");
 
 ### 関連資料:
 
-* [CSharpNeuralNetworkSample-AI-decode](https://github.com/Fujiwo/CSharpNeuralNetworkSample-AI-decode): neural network sample in C# for Microsoft de:code 2018 AI sessions (C# だけで機械学習の原理であるニューラルネットワークをフルスクラッチで書いてみるサンプルコードと説明)
+* [CSharpNeuralNetworkSample-AI-decode](https://github.com/Fujiwo/CSharpNeuralNetworkSample-AI-decode): neural network sample in C# for Microsoft de:code 2018 AI sessions (C# で機械学習の原理であるニューラルネットワークをフルスクラッチで書いてみるサンプルコードと説明)
 
 ---
