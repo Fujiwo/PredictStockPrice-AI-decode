@@ -4,6 +4,7 @@ PredictStockPrice Sample for Microsoft de:code 2018 AI sessions
 [Microsoft Azure Machine Learning Studio](https://studio.azureml.net) による株価予想プログラム
 
 ---
+
 ### 概要:
 Microsoft Azure Machine Learning Studio 上で、株価データを Python で加工し、機械学習させ、学習後のモデルから API を作成し、それを C# で呼んでみるところまでのチュートリアルです。
 
@@ -12,6 +13,8 @@ Azure Machine Learning Studio を使うと、簡単に機械学習を利用し�
 
 機械学習に用いるのは、福井コンピュータホールディングス株式会社 (9790) の実際の株価データ (12年分、2,986件) です。
 
+---
+
 ### レポジトリーの中のファイル:
 
 | ファイル名 | 説明 | 使用されている章 | 
@@ -19,6 +22,8 @@ Azure Machine Learning Studio を使うと、簡単に機械学習を利用し�
 | 9790.csv | 株価データ (CSV) | 2.6 |
 | AzureMachineLearningScript.1.py | Microsoft Azure Machine Learning Studio で用いる Python Script | 3.13 |
 | PredictStockPrice.Console/Program.cs | Microsoft Azure Machine Learning Studio で作成した API を呼び出す C# のサンプル コード | 5 |
+
+---
 
 ### チュートリアル 目次:
 
@@ -29,6 +34,7 @@ Azure Machine Learning Studio を使うと、簡単に機械学習を利用し�
 * [5. C# から API を呼んでみるテスト](#section5)
 
 ---
+
 ## <a id="section1"></a>1. SQL データベースの作成
 
 ### 1.1 [Azure ポータル](https://portal.azure.com) にサインインして、SQL データベースを作成します。
@@ -277,5 +283,10 @@ client.BaseAddress = new Uri("XXX");
 
 の行をコピーしてお使いください。
 
+---
+
+### 関連資料:
+
+* [CSharpNeuralNetworkSample-AI-decode](https://github.com/Fujiwo/CSharpNeuralNetworkSample-AI-decode): neural network sample in C# for Microsoft de:code 2018 AI sessions (C# だけで機械学習の原理であるニューラルネットワークをフルスクラッチで書いてみるサンプルコードと説明)
 
 ---
