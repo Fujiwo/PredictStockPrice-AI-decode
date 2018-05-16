@@ -10,6 +10,8 @@ Microsoft Azure Machine Learning Studio 上で、株価データを Python で�
 Azure Machine Learning Studio を使うと、簡単に機械学習を利用した API を作ることができます。
 その流れをステップ・バイ・ステップで説明します。
 
+機械学習に用いるのは、福井コンピュータホールディングス株式会社 (9790) の実際の株価データ (12年分、2,986件) です。
+
 ### レポジトリーの中のファイル:
 
 | ファイル名 | 説明 | 使用されている章 | 
@@ -17,7 +19,6 @@ Azure Machine Learning Studio を使うと、簡単に機械学習を利用し�
 | 9790.csv | 株価データ (CSV) | 2.6 |
 | AzureMachineLearningScript.1.py | Microsoft Azure Machine Learning Studio で用いる Python Script | 3.13 |
 | PredictStockPrice.Console/Program.cs | Microsoft Azure Machine Learning Studio で作成した API を呼び出す C# のサンプル コード | 5 |
-
 
 ### チュートリアル 目次:
 
