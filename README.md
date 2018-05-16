@@ -5,10 +5,10 @@ PredictStockPrice Sample for Microsoft de:code 2018 AI sessions
 
 ---
 ### 概要:
-Microsoft Azure Machine Learning Studio 上で、株価データを Python で加工し、機械学習させ、API を作成し、Web アプリケーションから JavaScript で使ってみるところまでのチュートリアル。
+Microsoft Azure Machine Learning Studio 上で、株価データを Python で加工し、機械学習させ、学習後のモデルから API を作成し、それを C# で呼んでみるところまでのチュートリアルです。
 
-### 狙い:
-Azure Machine Learning Studio を使って簡単に機械学習を利用した API が作れ、自分のアプリケーションで利用できるようになる。
+Azure Machine Learning Studio を使うと、簡単に機械学習を利用した API を作ることができます。
+その流れをステップ・バイ・ステップで説明します。
 
 ### レポジトリーの中のファイル:
 
@@ -19,7 +19,7 @@ Azure Machine Learning Studio を使って簡単に機械学習を利用した A
 | PredictStockPrice.Console/Program.cs | Microsoft Azure Machine Learning Studio で作成した API を呼び出す C# のサンプル コード | 5 |
 
 
-### 目次:
+### チュートリアル 目次:
 
 * [1. SQL データベースの作成](#section1)
 * [2. SQL データベースへのデータのアップロード](#section2)
